@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "ic_bitcoin_can_backend": {
+      "candid": "src/ic_bitcoin_can_backend/ic_bitcoin_can_backend.did",
+      "package": "ic_bitcoin_can_backend",
+      "type": "rust"
+    },
+    "ic_bitcoin_can_frontend": {
+      "dependencies": [
+        "ic_bitcoin_can_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ic_bitcoin_can_frontend/src/index.html"
+      },
+      "source": [
+        "src/ic_bitcoin_can_frontend/assets",
+        "dist/ic_bitcoin_can_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
